@@ -31,7 +31,7 @@
 
                 <div class="col-md-7">
                     <p class="fs-3 text-md-start text-center playfair">Selamat Datang di Website Resmi, Lembaga Pemeriksa
-                        Halal <span class="text-primary">Pusat Halal Insan Kamil </span>
+                        Halal <span class="text-primary ">Pusat Halal Insan Kamil </span>
                     </p>
                     <p class="text-md-start text-center">Mitra terpercaya dalam mewujudkan legalitas dan daya saing UMKM
                         melalui layanan halal yang terintegrasi, profesional, dan berlandaskan syariah.</p>
