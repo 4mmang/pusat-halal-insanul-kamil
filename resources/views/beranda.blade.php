@@ -39,6 +39,7 @@
                         kegiatan pemeriksaan dan/atau pengujian
                         terhadap kehalalan produk sebagai bagian dari sistem Jaminan Produk Halal yang ditetapkan oleh
                         negara.</p>
+                        <p class="mt-4 text-primary text-md-start text-center">Jam Operasional : Senin, selasa, rabu, jum’at & sabtu buka pukul 08.00-04.00 WITA</p>
                     <div class="row">
                         <div class="col-12 text-lg-start text-center">
                             <a href="#" class="btn btn-primary rounded-5 py-2 px-4 mt-3 fw-bold">
@@ -102,7 +103,7 @@
                     <p>Kami melaksanakan fungsi sebagai LPH atau Lembaga Pemeriksa Halal untuk Kehalalan Produk, sebagaimana
                         yang diamanatkan oleh Undang – Undang No. 33 Tahun 2014 yang memiliki peran yang sangat penting
                         dalam penyelenggaraan JPH di Indonesia.</p>
-                        <p class="fw-bold mt-4">MELAYANI PEMERIKSAAN PADA LINGKUP</p>
+                        <p class="fw-bold mt-4">LAYANAN LPH PUSAT HALAL INSAN KAMIL</p>
                     <div class="accordion" id="collapseParent">
                         <!-- Makanan -->
                         <button class="btn btn-outline-primary form-control mb-2 text-start" type="button"
@@ -243,6 +244,17 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light">
+        <div class="container pb-4">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p class="fs-3 playfair text-center mb-5">Alur & Prosedur Sertifikasi Halal</p>
+                    <img src="{{ asset('img/alur-proses.png') }}" class="img-fluid" alt="">
                 </div>
             </div>
         </div>
