@@ -6,11 +6,23 @@
                 <p class="fs-3 playfair">FAQ (Tanya Jawab Umum)</p>
                 <div class="accordion" id="collapseParent">
                     <!-- Makanan -->
-                    <button class="btn btn-outline-primary form-control mb-2 text-start" type="button"
+                    {{-- <button class="btn btn-outline-primary form-control mb-2 text-start" type="button"
                         data-bs-toggle="collapse" data-bs-target="#collapseMakanan" aria-expanded="false"
                         aria-controls="collapseMakanan">
                         Apa itu Sertifikat Halal & Fungsinya?
+                    </button> --}}
+                    <button
+                        class="btn btn-outline-primary form-control mb-2 text-start d-flex justify-content-between align-items-center"
+                        type="button" data-bs-toggle="collapse" data-bs-target="#collapseMakanan" aria-expanded="false"
+                        aria-controls="collapseMakanan">
+                        <span>Apa itu Sertifikat Halal & Fungsinya?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-chevron-down" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                        </svg>
                     </button>
+
                     <div class="collapse" id="collapseMakanan" data-bs-parent="#collapseParent">
                         <div class="card card-body">
                             <p>Sertifikat Halal adalah fatwa tertulis yang diterbitkan oleh Badan Penyelenggara Jaminan

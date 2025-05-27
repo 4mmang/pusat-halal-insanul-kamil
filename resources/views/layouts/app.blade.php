@@ -19,6 +19,124 @@
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <style>
+        /* #bg-image {
+            background-image: url('/img/bg.webp');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+        }
+
+        #bg-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: #0e3500bb;
+            z-index: 1;
+        } */
+
+        #bg-image {
+            position: relative;
+            background-image: url('/img/bg.webp');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            color: white;
+            /* warna teks agar kontras */
+        }
+
+        #bg-footer {
+            position: relative;
+            background-image: url('https://picsum.photos/400/200');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 30vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            color: white;
+            /* warna teks agar kontras */
+        }
+
+        #bg-menu {
+            position: relative;
+            /* background-image: url('https://fastly.picsum.photos/id/352/400/200.jpg?hmac=x6IEgIIuzQMVaiOYDyTFp4KUSdkqzGT87ofb6fy3HWk'); */
+            background-image: url('https://fastly.picsum.photos/id/912/400/200.jpg?hmac=A8Tgnae0SdlffCjD8tpcLDYw0l7ZwOFd9w5EUFiJQfU');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 30vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            color: white;
+            /* warna teks agar kontras */
+        }
+
+        #bg-menu::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: #1b1d1bcc;
+            /* warna hijau transparan */
+            z-index: 1;
+        }
+
+        #bg-footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: #0e3500bb;
+            /* warna hijau transparan */
+            z-index: 1;
+        }
+
+        #bg-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: #0e3500bb;
+            /* warna hijau transparan */
+            z-index: 1;
+        }
+
+        /* bungkus teks agar di atas overlay */
+        .text-wrapper {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+        }
+
+        .text-wrapper-1 {
+            position: relative;
+            z-index: 2;
+            /* max-width: 1000px; */
+        }
+
+
         .playfair {
             font-family: "Playfair Display", serif;
             font-weight: 500;
@@ -27,11 +145,22 @@
             /* atau italic */
         }
 
-
         .work-sans {
             font-family: "Work Sans", sans-serif;
             font-weight: 500;
             font-style: normal;
+        }
+
+        .text-default {
+            color: #093500d7
+        }
+
+        .bg-primary {
+            background-color: #093500cc !important
+        }
+
+        .btn-default {
+            background-color: #0935009f !important
         }
     </style>
 </head>
