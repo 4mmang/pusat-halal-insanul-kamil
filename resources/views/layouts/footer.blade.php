@@ -7,7 +7,7 @@
                 </p>
             </div>
             <div class="col-md-3 d-flex align-items-center justify-content-md-end justify-content-start mt-3 mt-md-0">
-                <a href="#" class="btn btn-warning rounded-5 px-4 py-2 text-default">
+                <a href="https://wa.me/6285240364660" class="btn btn-warning rounded-5 px-4 py-2 text-default">
                     Hubungi Kami
                 </a>
             </div>

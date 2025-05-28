@@ -4,6 +4,7 @@ use App\Http\Controllers\ArtikelController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\FAQController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\KelolaArtikelController;
 use App\Http\Controllers\KelolaBeritaController;
@@ -23,11 +24,9 @@ Route::get('/layanan', function () {
 })->name('layanan');
 
 Route::resource('/artikel', ArtikelController::class)->only(['index', 'show']);
-Route::resource('/berita', BeritaController::class)->only(['index', 'show']); 
+Route::resource('/berita', BeritaController::class)->only(['index', 'show']);
+Route::get('/faq', [FAQController::class, 'index'])->name('faq');
 
-Route::get('/faq', function () {
-    return view('faq');
-})->name('faq');
 
 Route::get('/kontak', function () {
     return view('kontak');

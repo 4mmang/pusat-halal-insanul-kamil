@@ -3,7 +3,7 @@
     <ul class="navbar-nav sidebar sidebar-dark accordion" style="background-color: #38527E" id="accordionSidebar">
 
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ url('/') }}">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" target="_blank" href="{{ url('/') }}">
             <div class="sidebar-brand-icon rotate-n-15">
                 <i class="fas fa-home"></i>
             </div>

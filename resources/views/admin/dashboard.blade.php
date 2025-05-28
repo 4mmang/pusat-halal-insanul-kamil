@@ -16,7 +16,7 @@
                             <div class="col mr-2 ms-3">
                                 <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                     Total Pendaftar</div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800">20</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $totalPendaftar }}</div>
                             </div>
                             <div class="col-auto mr-3">
                                 <i class="fas fa-user-plus fa-2x text-gray-300"></i>
@@ -32,7 +32,7 @@
                             <div class="col mr-2 ms-3">
                                 <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                     Total Artikel</div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800">20</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $totalArtikel }}</div>
                             </div>
                             <div class="col-auto mr-3">
                                 <i class="fas fa-blog fa-2x text-gray-300"></i>
@@ -48,7 +48,7 @@
                             <div class="col mr-2 ms-3">
                                 <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                     Total Berita</div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800">20</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $totalBerita }}</div>
                             </div>
                             <div class="col-auto mr-3">
                                 <i class="fas fa-bullhorn fa-2x text-gray-300"></i>
@@ -64,7 +64,7 @@
                             <div class="col mr-2 ms-3">
                                 <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                     Total FAQ</div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800">20</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $totalFAQ }}</div>
                             </div>
                             <div class="col-auto mr-3">
                                 <i class="fas fa-question-circle fa-2x text-gray-300"></i>
