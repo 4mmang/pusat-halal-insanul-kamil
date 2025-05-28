@@ -187,7 +187,7 @@ class KelolaArtikelController extends Controller
             $images = $dom->getElementsByTagName('img');
 
             foreach ($images as $img) {
-                $relativePath = str_replace('http://127.0.0.1:8000/storage/', '', $img->getAttribute('src'));
+                $relativePath = str_replace('https://lembagapemeriksahalalpusathalalinsankamil.com/storage/', '', $img->getAttribute('src'));
                 Storage::disk('public')->delete($relativePath);
             }
 
