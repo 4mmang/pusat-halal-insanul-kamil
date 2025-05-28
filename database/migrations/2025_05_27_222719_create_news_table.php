@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('judul'); // Title of the news
             $table->longText('deskripsi'); // Description/content of the news
             $table->string('sampul')->nullable(); // Path to the cover image
-            $table->foreignId('id_user')->constrained('users')->onDelete('set null'); // User who created the news
+            $table->foreignId('id_user')->constrained('users')->onDelete('cascade'); // User who created the news
             $table->timestamps(); // created_at, updated_at
         });
     }

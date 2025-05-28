@@ -14,8 +14,15 @@
     <section class="py-5">
         <div class="container">
             <div class="card shadow-lg p-3">
+
                 <div class="card-body">
-                    <form action="{{ route('pendaftaran.store') }}" method="POST">
+                    @if (session('message'))
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            {{ session('message') }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    @endif
+                    <form action="{{ route('pendaftaran.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="row">
                             <div class="col-md-6 mb-3">
@@ -23,7 +30,7 @@
                                         class="text-danger">*</span></label>
                                 <input type="date"
                                     class="form-control @error('tanggal_pendaftaran') is-invalid @enderror"
-                                    name="tanggal_pendaftaran" id="tanggal_pendaftaran" required
+                                    name="tanggal_pendaftaran" id="tanggal_pendaftaran"
                                     value="{{ old('tanggal_pendaftaran') }}">
                                 @error('tanggal_pendaftaran')
                                     <div class="text-danger small mt-1">{{ $message }}</div>
@@ -34,7 +41,7 @@
                                         class="text-danger">*</span></label>
                                 <select name="status_pendaftaran"
                                     class="form-control @error('status_pendaftaran') is-invalid @enderror"
-                                    id="status_pendaftaran" required>
+                                    id="status_pendaftaran">
                                     <option value="baru" {{ old('status_pendaftaran') == 'baru' ? 'selected' : '' }}>Baru
                                     </option>
                                     <option value="lama" {{ old('status_pendaftaran') == 'lama' ? 'selected' : '' }}>Lama
@@ -45,10 +52,10 @@
                                 @enderror
                             </div>
                             <div class="col-md-6 mb-3">
-                                <label for="nama_usaha" class="mb-2">Nama Usaha/Perusahaan <span
-                                        class="text-danger">*</span></label>
+                                <label for="nama_usaha" class="mb-2">Nama Usaha/Perusahaan
+                                    <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control @error('nama_usaha') is-invalid @enderror"
-                                    name="nama_usaha" id="nama_usaha" required value="{{ old('nama_usaha') }}">
+                                    name="nama_usaha" id="nama_usaha" value="{{ old('nama_usaha') }}">
                                 @error('nama_usaha')
                                     <div class="text-danger small mt-1">{{ $message }}</div>
                                 @enderror
@@ -57,7 +64,7 @@
                                 <label for="alamat_usaha" class="mb-2">Alamat Usaha <span
                                         class="text-danger">*</span></label>
                                 <input type="text" class="form-control @error('alamat_usaha') is-invalid @enderror"
-                                    name="alamat_usaha" id="alamat_usaha" required value="{{ old('alamat_usaha') }}">
+                                    name="alamat_usaha" id="alamat_usaha" value="{{ old('alamat_usaha') }}">
                                 @error('alamat_usaha')
                                     <div class="text-danger small mt-1">{{ $message }}</div>
                                 @enderror
@@ -65,7 +72,7 @@
                             <div class="col-md-6 mb-3">
                                 <label for="kelurahan" class="mb-2">Kelurahan <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control @error('kelurahan') is-invalid @enderror"
-                                    name="kelurahan" id="kelurahan" required value="{{ old('kelurahan') }}">
+                                    name="kelurahan" id="kelurahan" value="{{ old('kelurahan') }}">
                                 @error('kelurahan')
                                     <div class="text-danger small mt-1">{{ $message }}</div>
                                 @enderror
@@ -73,7 +80,7 @@
                             <div class="col-md-6 mb-3">
                                 <label for="kecamatan" class="mb-2">Kecamatan <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control @error('kecamatan') is-invalid @enderror"
-                                    name="kecamatan" id="kecamatan" required value="{{ old('kecamatan') }}">
+                                    name="kecamatan" id="kecamatan" value="{{ old('kecamatan') }}">
                                 @error('kecamatan')
                                     <div class="text-danger small mt-1">{{ $message }}</div>
                                 @enderror
@@ -81,7 +88,7 @@
                             <div class="col-md-6 mb-3">
                                 <label for="kabupaten" class="mb-2">Kab/Kota <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control @error('kabupaten') is-invalid @enderror"
-                                    name="kabupaten" id="kabupaten" required value="{{ old('kabupaten') }}">
+                                    name="kabupaten" id="kabupaten" value="{{ old('kabupaten') }}">
                                 @error('kabupaten')
                                     <div class="text-danger small mt-1">{{ $message }}</div>
                                 @enderror
@@ -89,7 +96,7 @@
                             <div class="col-md-6 mb-3">
                                 <label for="provinsi" class="mb-2">Provinsi <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control @error('provinsi') is-invalid @enderror"
-                                    name="provinsi" id="provinsi" required value="{{ old('provinsi') }}">
+                                    name="provinsi" id="provinsi" value="{{ old('provinsi') }}">
                                 @error('provinsi')
                                     <div class="text-danger small mt-1">{{ $message }}</div>
                                 @enderror
@@ -97,7 +104,7 @@
                             <div class="col-md-6 mb-3">
                                 <label for="kode_pos" class="mb-2">Kode Pos <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control @error('kode_pos') is-invalid @enderror"
-                                    name="kode_pos" id="kode_pos" required value="{{ old('kode_pos') }}">
+                                    name="kode_pos" id="kode_pos" value="{{ old('kode_pos') }}">
                                 @error('kode_pos')
                                     <div class="text-danger small mt-1">{{ $message }}</div>
                                 @enderror
@@ -106,7 +113,7 @@
                                 <label for="skala_usaha" class="mb-2">Skala Usaha <span
                                         class="text-danger">*</span></label>
                                 <select name="skala_usaha" class="form-control @error('skala_usaha') is-invalid @enderror"
-                                    id="skala_usaha" required>
+                                    id="skala_usaha">
                                     <option value="mikro" {{ old('skala_usaha') == 'mikro' ? 'selected' : '' }}>Mikro
                                     </option>
                                     <option value="menengah" {{ old('skala_usaha') == 'menengah' ? 'selected' : '' }}>
@@ -122,8 +129,7 @@
                                 <label for="lokasi_produksi" class="mb-2">Alamat Lokasi Produksi <span
                                         class="text-danger">*</span></label>
                                 <input type="text" class="form-control @error('lokasi_produksi') is-invalid @enderror"
-                                    name="lokasi_produksi" id="lokasi_produksi" required
-                                    value="{{ old('lokasi_produksi') }}">
+                                    name="lokasi_produksi" id="lokasi_produksi" value="{{ old('lokasi_produksi') }}">
                                 @error('lokasi_produksi')
                                     <div class="text-danger small mt-1">{{ $message }}</div>
                                 @enderror
@@ -132,8 +138,7 @@
                                 <label for="status_usaha" class="mb-2">Status Usaha <span
                                         class="text-danger">*</span></label>
                                 <select name="status_usaha"
-                                    class="form-control @error('status_usaha') is-invalid @enderror" id="status_usaha"
-                                    required>
+                                    class="form-control @error('status_usaha') is-invalid @enderror" id="status_usaha">
                                     <option value="pribadi" {{ old('status_usaha') == 'pribadi' ? 'selected' : '' }}>Milik
                                         Sendiri</option>
                                     <option value="bersama" {{ old('status_usaha') == 'bersama' ? 'selected' : '' }}>
@@ -147,7 +152,7 @@
                                 <label for="email_usaha" class="mb-2">Email Usaha <span
                                         class="text-danger">*</span></label>
                                 <input type="email" class="form-control @error('email_usaha') is-invalid @enderror"
-                                    name="email_usaha" id="email_usaha" required value="{{ old('email_usaha') }}">
+                                    name="email_usaha" id="email_usaha" value="{{ old('email_usaha') }}">
                                 @error('email_usaha')
                                     <div class="text-danger small mt-1">{{ $message }}</div>
                                 @enderror
@@ -156,7 +161,7 @@
                                 <label for="no_hp_usaha" class="mb-2">No Telephone/Whatsapp Usaha <span
                                         class="text-danger">*</span></label>
                                 <input type="number" class="form-control @error('no_hp_usaha') is-invalid @enderror"
-                                    name="no_hp_usaha" id="no_hp_usaha" required value="{{ old('no_hp_usaha') }}">
+                                    name="no_hp_usaha" id="no_hp_usaha" value="{{ old('no_hp_usaha') }}">
                                 @error('no_hp_usaha')
                                     <div class="text-danger small mt-1">{{ $message }}</div>
                                 @enderror
@@ -165,7 +170,7 @@
                                 <label for="nama_lengkap" class="mb-2">Nama Lengkap <span
                                         class="text-danger">*</span></label>
                                 <input type="text" class="form-control @error('nama_lengkap') is-invalid @enderror"
-                                    name="nama_lengkap" id="nama_lengkap" required value="{{ old('nama_lengkap') }}">
+                                    name="nama_lengkap" id="nama_lengkap" value="{{ old('nama_lengkap') }}">
                                 @error('nama_lengkap')
                                     <div class="text-danger small mt-1">{{ $message }}</div>
                                 @enderror
@@ -173,7 +178,7 @@
                             <div class="col-md-6 mb-3">
                                 <label for="no_ktp" class="mb-2">Nomor KTP <span class="text-danger">*</span></label>
                                 <input type="number" class="form-control @error('no_ktp') is-invalid @enderror"
-                                    name="no_ktp" id="no_ktp" required value="{{ old('no_ktp') }}">
+                                    name="no_ktp" id="no_ktp" value="{{ old('no_ktp') }}">
                                 @error('no_ktp')
                                     <div class="text-danger small mt-1">{{ $message }}</div>
                                 @enderror
@@ -182,7 +187,7 @@
                                 <label for="email_pribadi" class="mb-2">Email Pribadi (Aktif) <span
                                         class="text-danger">*</span></label>
                                 <input type="email" class="form-control @error('email_pribadi') is-invalid @enderror"
-                                    name="email_pribadi" id="email_pribadi" required value="{{ old('email_pribadi') }}">
+                                    name="email_pribadi" id="email_pribadi" value="{{ old('email_pribadi') }}">
                                 @error('email_pribadi')
                                     <div class="text-danger small mt-1">{{ $message }}</div>
                                 @enderror
@@ -191,7 +196,7 @@
                                 <label for="no_hp" class="mb-2">No. Telp/Whatsapp <span
                                         class="text-danger">*</span></label>
                                 <input type="number" class="form-control @error('no_hp') is-invalid @enderror"
-                                    name="no_hp" id="no_hp" required value="{{ old('no_hp') }}">
+                                    name="no_hp" id="no_hp" value="{{ old('no_hp') }}">
                                 @error('no_hp')
                                     <div class="text-danger small mt-1">{{ $message }}</div>
                                 @enderror
@@ -201,8 +206,7 @@
                                         class="text-danger">*</span></label>
                                 <input type="text"
                                     class="form-control @error('penanggung_jawab') is-invalid @enderror"
-                                    name="penanggung_jawab" id="penanggung_jawab" required
-                                    value="{{ old('penanggung_jawab') }}">
+                                    name="penanggung_jawab" id="penanggung_jawab" value="{{ old('penanggung_jawab') }}">
                                 @error('penanggung_jawab')
                                     <div class="text-danger small mt-1">{{ $message }}</div>
                                 @enderror
@@ -210,7 +214,7 @@
                             <div class="col-md-6 mb-3">
                                 <label for="jabatan" class="mb-2">Jabatan <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control @error('jabatan') is-invalid @enderror"
-                                    name="jabatan" id="jabatan" required value="{{ old('jabatan') }}">
+                                    name="jabatan" id="jabatan" value="{{ old('jabatan') }}">
                                 @error('jabatan')
                                     <div class="text-danger small mt-1">{{ $message }}</div>
                                 @enderror
@@ -218,7 +222,7 @@
                             <div class="col-md-6 mb-3">
                                 <label for="ktp" class="mb-2">KTP <span class="text-danger">*</span></label>
                                 <input type="file" class="form-control @error('ktp') is-invalid @enderror"
-                                    name="ktp" id="ktp" required>
+                                    name="ktp" id="ktp">
                                 @error('ktp')
                                     <div class="text-danger small mt-1">{{ $message }}</div>
                                 @enderror
@@ -242,8 +246,9 @@
                             <div class="col-md-6 mb-3">
                                 <label for="logo_usaha" class="mb-2">Logo Usaha <span
                                         class="text-danger">*</span></label>
-                                <input type="file" class="form-control @error('logo_usaha') is-invalid @enderror"
-                                    name="logo_usaha" id="logo_usaha" required>
+                                <input type="file" type="image"
+                                    class="form-control @error('logo_usaha') is-invalid @enderror" name="logo_usaha"
+                                    id="logo_usaha">
                                 @error('logo_usaha')
                                     <div class="text-danger small mt-1">{{ $message }}</div>
                                 @enderror
