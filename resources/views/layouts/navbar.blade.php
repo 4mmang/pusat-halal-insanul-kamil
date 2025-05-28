@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-white fixed-top py-4">
     <div class="container">
-        <a class="navbar-brand work-sans text-default fw-bold playfair" href="#">PUSAT HALAL <span
+        <a class="navbar-brand work-sans text-default fw-bold playfair" href="{{ route('home') }}">PUSAT HALAL <span
                 class="text-warning">INSAN KAMIL</span></a>
         <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"

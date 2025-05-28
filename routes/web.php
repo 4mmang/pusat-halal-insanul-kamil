@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PendaftaranController;
 use Illuminate\Support\Facades\Route;
 
@@ -30,5 +31,9 @@ Route::get('/faq', function () {
 Route::get('/kontak', function () {
     return view('kontak');
 })->name('kontak');
+
+Route::get('/login', [AuthController::class, 'formLogin'])->name('login')->middleware('guest');
+Route::post('/login', [AuthController::class, 'login'])->name('login');
+Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::resource('/pendaftaran', PendaftaranController::class)->only(['create', 'store']);
