@@ -37,13 +37,13 @@
                 <i class="fas fa-fw fa-blog"></i>
                 <span>Artikel</span></a>
         </li>
-        <li class="nav-item {{ Request::is('admin/dataset*') ? 'active' : '' }}">
-            <a class="nav-link" href="">
+        <li class="nav-item {{ Request::is('kelola-berita*') ? 'active' : '' }}">
+            <a class="nav-link" href="{{ route('kelola-berita.index') }}">
                 <i class="fas fa-fw fa-bullhorn"></i>
                 <span>Berita</span></a>
         </li>
-        <li class="nav-item {{ Request::is('admin/dataset*') ? 'active' : '' }}">
-            <a class="nav-link" href="">
+        <li class="nav-item {{ Request::is('kelola-FAQ*') ? 'active' : '' }}">
+            <a class="nav-link" href="{{ route('kelola-FAQ.index') }}">
                 <i class="fas fa-fw fa-question-circle"></i>
                 <span>FAQ</span></a>
         </li>

@@ -14,7 +14,8 @@
 
     <section class="py-5 bg-light">
         <div class="container">
-            <p class="fs-3 playfair text-default mb-5 text-center">Mengapa LPH Insan Kamil Menjadi Pilihan Utama untuk Sertifikasi
+            <p class="fs-3 playfair text-default mb-5 text-center">Mengapa LPH Insan Kamil Menjadi Pilihan Utama untuk
+                Sertifikasi
                 Halal
                 Resmi Indonesia ?</p>
             <div class="row row-cols-1 row-cols-md-4 g-4 align-items-stretch">
@@ -38,7 +39,7 @@
                             </p>
                         </div>
                     </div>
-                </div> 
+                </div>
                 <div class="col">
                     <div class="card shadow-lg h-100 p-1">
                         <div class="card-body">
@@ -313,45 +314,40 @@
 
     <section class="py-5 mb-5">
         <div class="container">
-            <p class="fs-3 playfair text-center mb-5 text-default">Berita dan Artikel Terbaru Seputar Sertifikasi Halal Resmi Indonesia
+            <p class="fs-3 playfair text-center mb-5 text-default">Berita dan Artikel Terbaru Seputar Sertifikasi Halal
+                Resmi Indonesia
             </p>
 
-            <div class="row row-cols-1 row-cols-md-3 g-4 align-items-stretch">
-                <div class="col">
-                    <div class="card h-100 shadow-lg">
-                        <img src="https://picsum.photos/400/200?random=1" class="card-img-top" alt="...">
-                        <div class="card-body d-flex flex-column">
-                            <span class="badge bg-warning text-dark align-self-end mb-2">ARTIKEL</span>
-                            <h5 class="card-title">Sosialisasi Sertifikasi Halal</h5>
-                            <p class="text-muted mt-auto">February 1, 2025</p>
+            <div class="row row-cols-1 justify-content-center row-cols-md-4 g-4 align-items-stretch">
+                @foreach ($berita as $item)
+                    <div class="col">
+                        <div class="card h-100 shadow-lg">
+                            <a class="text-decoration-none" href="{{ route('berita.show', $item->id) }}">
+                                <img src="{{ asset('storage/' . $item->sampul) }}" class="card-img-top" alt="...">
+                                <div class="card-body d-flex flex-column">
+                                    <span class="badge bg-warning text-dark align-self-end mb-2">BERITA</span>
+                                    <p class="card-title text-default">{{ Str::limit($item->judul, 50, '...') }}</p>
+                                    <p class="text-muted mt-auto">{{ $item->created_at->format('F j, Y') }}</p>
+                                </div>
+                            </a>
                         </div>
                     </div>
-                </div>
-
-                <div class="col">
-                    <div class="card h-100 shadow-lg">
-                        <img src="https://picsum.photos/400/200?random=2" class="card-img-top" alt="...">
-                        <div class="card-body d-flex flex-column">
-                            <span class="badge bg-warning text-dark align-self-end mb-2">BERITA</span>
-                            <h5 class="card-title">satgas halal Kota Bogor menyerahkan sertifikat halal...</h5>
-                            <p class="text-muted mt-auto">December 10, 2024</p>
+                @endforeach
+                @foreach ($artikel as $item)
+                    <div class="col">
+                        <div class="card h-100 shadow-lg">
+                            <a class="text-decoration-none" href="{{ route('artikel.show', $item->id) }}">
+                                <img src="{{ asset('storage/' . $item->sampul) }}" class="card-img-top" alt="...">
+                                <div class="card-body d-flex flex-column">
+                                    <span class="badge bg-warning text-dark align-self-end mb-2">ARTIKEL</span>
+                                    <p class="card-title text-default">{{ Str::limit($item->judul, 50, '...') }}</p>
+                                    <p class="text-muted mt-auto">{{ $item->created_at->format('F j, Y') }}</p>
+                                </div>
+                            </a>
                         </div>
                     </div>
-                </div>
-
-                <div class="col">
-                    <div class="card h-100 shadow-lg">
-                        <img src="https://picsum.photos/400/200?random=3" class="card-img-top" alt="...">
-                        <div class="card-body d-flex flex-column">
-                            <span class="badge bg-warning text-dark align-self-end mb-2">ARTIKEL</span>
-                            <h5 class="card-title">Manfaat Sertifikasi Halal Resmi Indonesia untuk Bisnis Anda</h5>
-                            <p class="text-muted mt-auto">December 9, 2024</p>
-                        </div>
-                    </div>
-                </div>
-
+                @endforeach
             </div>
         </div>
-
     </section>
 @endsection

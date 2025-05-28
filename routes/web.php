@@ -2,15 +2,17 @@
 
 use App\Http\Controllers\ArtikelController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\KelolaArtikelController;
+use App\Http\Controllers\KelolaBeritaController;
+use App\Http\Controllers\KelolaFAQController;
 use App\Http\Controllers\KelolaPendaftaranController;
 use App\Http\Controllers\PendaftaranController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('home');
-})->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/profil', function () {
     return view('profil');
@@ -21,10 +23,7 @@ Route::get('/layanan', function () {
 })->name('layanan');
 
 Route::resource('/artikel', ArtikelController::class)->only(['index', 'show']);
-
-Route::get('/berita', function () {
-    return view('berita.index');
-})->name('berita');
+Route::resource('/berita', BeritaController::class)->only(['index', 'show']); 
 
 Route::get('/faq', function () {
     return view('faq');
@@ -44,4 +43,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::resource('/kelola-pendaftaran', KelolaPendaftaranController::class)->only(['index', 'show']);
     Route::resource('/kelola-artikel', KelolaArtikelController::class)->except('show');
+    Route::resource('/kelola-berita', KelolaBeritaController::class)->except('show');
+    Route::resource('/kelola-FAQ', KelolaFAQController::class)->except('show');
 });

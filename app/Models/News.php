@@ -10,4 +10,6 @@ class News extends Model
     {
         return $this->belongsTo(User::class, 'id_user');
     }
+
+    protected $guarded = [];
 }

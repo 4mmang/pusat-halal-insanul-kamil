@@ -14,7 +14,7 @@
                 <a class="nav-link " href="{{ route('layanan') }}">Layanan</a>
                 <a class="nav-link " href="{{ route('pendaftaran.create') }}">Form Pendaftaran</a>
                 <a class="nav-link " href="{{ route('artikel.index') }}">Artikel</a>
-                <a class="nav-link " href="{{ route('berita') }}">Berita</a>
+                <a class="nav-link " href="{{ route('berita.index') }}">Berita</a>
                 <a class="nav-link " href="{{ route('kontak') }}">Kontak</a>
                 <a class="nav-link " href="{{ route('faq') }}">FAQ</a>
             </div>

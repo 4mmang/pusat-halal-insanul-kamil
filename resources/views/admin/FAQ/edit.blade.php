@@ -7,8 +7,8 @@
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
             <p class="mb-0" style="color: #38527E"><a href="{{ route('dashboard') }}" class="text-decoration-none">Pusat Halal
                     Insan Kamil</a> /
-                <a href="{{ route('kelola-artikel.index') }}" class="text-decoration-none"> Daftar Artikel </a>/ Tambah
-                Artikel
+                <a href="{{ route('kelola-FAQ.index') }}" class="text-decoration-none"> Daftar FAQ </a>/ Edit
+                FAQ
             </p>
         </div>
 
@@ -16,31 +16,24 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="card p-3">
-                    <form id="new-article" action="{{ route('kelola-artikel.store') }}" method="post"
-                        enctype="multipart/form-data">
+                    <form id="new-article" action="{{ route('kelola-FAQ.update', $faq->id) }}" method="post">
                         @csrf
-                        <label for="judul">Judul<sup class="text-danger">*</sup></label>
-                        <input type="text" class="form-control @error('judul') is-invalid @enderror" name="judul"
-                            id="judul" value="{{ old('judul') }}">
-                        @error('judul')
+                        @method('put')
+                        <label for="question">Question<sup class="text-danger">*</sup></label>
+                        <input type="text" class="form-control @error('question') is-invalid @enderror" name="question"
+                            id="question" value="{{ $faq->question }}">
+                        @error('question')
                             <div class="text-danger small mt-1">{{ $message }}</div>
                         @enderror
 
-                        <label for="sampul" class="mt-3">Sampul<sup class="text-danger">*</sup></label>
-                        <input type="file" class="form-control @error('sampul') is-invalid @enderror" name="sampul"
-                            id="sampul">
-                        @error('sampul')
+                        <label for="answer" class="mt-3">answer<sup class="text-danger">*</sup></label>
+                        <textarea name="answer" id="answer" cols="30" rows="10"
+                            class="form-control @error('answer') is-invalid @enderror">{{ $faq->answer }}</textarea>
+                        @error('answer')
                             <div class="text-danger small mt-1">{{ $message }}</div>
                         @enderror
 
-                        <label for="deskripsi" class="mt-3">Deskripsi<sup class="text-danger">*</sup></label>
-                        <textarea name="deskripsi" id="deskripsi" cols="30" rows="10"
-                            class="form-control @error('deskripsi') is-invalid @enderror">{{ old('deskripsi') }}</textarea>
-                        @error('deskripsi')
-                            <div class="text-danger small mt-1">{{ $message }}</div>
-                        @enderror
-
-                        <a href="{{ route('kelola-artikel.index') }}" class="btn btn-danger float-end mt-3 ml-2">Kembali</a>
+                        <a href="{{ route('kelola-FAQ.index') }}" class="btn btn-danger float-end mt-3 ml-2">Kembali</a>
                         <button id="save" type="submit" style="background-color: #38527E"
                             class="btn text-white mt-3 float-end px-4"><i class="fas fa-save mr-1"></i>
                             Simpan</button>
@@ -52,8 +45,8 @@
 @endsection
 @section('scripts')
     <script>
-        $('#deskripsi').summernote({
-            placeholder: 'Masukkan isi konten...',
+        $('#answer').summernote({
+            placeholder: 'Masukkan jawaban...',
             tabsize: 2,
             height: 150,
             toolbar: [
@@ -62,7 +55,7 @@
                 ['color', ['color']],
                 ['para', ['ul', 'ol', 'paragraph']],
                 ['table', ['table']],
-                ['insert', ['link', 'picture']],
+                ['insert', ['link']],
             ],
             popover: {
                 image: [

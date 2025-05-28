@@ -28,10 +28,12 @@
 
                         <label for="deskripsi" class="mt-3">Deskripsi<sup class="text-danger">*</sup></label>
                         <textarea class="form-control" name="deskripsi" id="deskripsi" cols="30" rows="10" required>{{ $artikel->deskripsi }}</textarea>
+                        
                         <a href="{{ route('kelola-artikel.index') }}" class="btn btn-danger float-end mt-3 ml-2">Kembali</a>
                         <button id="save" type="submit" style="background-color: #38527E"
                             class="btn text-white mt-3 float-end px-4"><i class="fas fa-save mr-1"></i>
-                            Update</button>
+                            Update
+                        </button>
                     </form>
                 </div>
             </div>
@@ -52,7 +54,16 @@
                 ['para', ['ul', 'ol', 'paragraph']],
                 ['table', ['table']],
                 ['insert', ['link', 'picture']],
-            ]
+            ],
+            popover: {
+                image: [
+                    ['image', ['resizeFull', 'resizeHalf',
+                        'resizeQuarter',
+                    ]],
+                    ['float', ['floatLeft', 'floatRight', 'floatNone']],
+                    ['remove', ['removeMedia']]
+                ]
+            }
         })
     </script>
     <script>

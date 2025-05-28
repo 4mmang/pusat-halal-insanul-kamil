@@ -7,8 +7,8 @@
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
             <p class="mb-0" style="color: #38527E"><a href="{{ route('dashboard') }}" class="text-decoration-none">Pusat Halal
                     Insan Kamil</a> /
-                <a href="{{ route('kelola-artikel.index') }}" class="text-decoration-none"> Daftar Artikel </a>/ Tambah
-                Artikel
+                <a href="{{ route('kelola-berita.index') }}" class="text-decoration-none"> Daftar Berita </a>/ Tambah
+                Berita
             </p>
         </div>
 
@@ -16,7 +16,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="card p-3">
-                    <form id="new-article" action="{{ route('kelola-artikel.store') }}" method="post"
+                    <form id="new-article" action="{{ route('kelola-berita.store') }}" method="post"
                         enctype="multipart/form-data">
                         @csrf
                         <label for="judul">Judul<sup class="text-danger">*</sup></label>
@@ -40,7 +40,7 @@
                             <div class="text-danger small mt-1">{{ $message }}</div>
                         @enderror
 
-                        <a href="{{ route('kelola-artikel.index') }}" class="btn btn-danger float-end mt-3 ml-2">Kembali</a>
+                        <a href="{{ route('kelola-berita.index') }}" class="btn btn-danger float-end mt-3 ml-2">Kembali</a>
                         <button id="save" type="submit" style="background-color: #38527E"
                             class="btn text-white mt-3 float-end px-4"><i class="fas fa-save mr-1"></i>
                             Simpan</button>
@@ -67,8 +67,7 @@
             popover: {
                 image: [
                     ['image', ['resizeFull', 'resizeHalf',
-                        'resizeQuarter',
-                    ]],
+                    'resizeQuarter', ]], 
                     ['float', ['floatLeft', 'floatRight', 'floatNone']],
                     ['remove', ['removeMedia']]
                 ]
