@@ -32,8 +32,8 @@
                 <i class="fas fa-fw fa-user-plus"></i>
                 <span>Pendaftaran</span></a>
         </li>
-        <li class="nav-item {{ Request::is('admin/dataset*') ? 'active' : '' }}">
-            <a class="nav-link" href="">
+        <li class="nav-item {{ Request::is('kelola-artikel*') ? 'active' : '' }}">
+            <a class="nav-link" href="{{ route('kelola-artikel.index') }}">
                 <i class="fas fa-fw fa-blog"></i>
                 <span>Artikel</span></a>
         </li>
