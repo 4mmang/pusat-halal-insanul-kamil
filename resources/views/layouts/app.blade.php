@@ -18,29 +18,11 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <style>
-        /* #bg-image {
-            background-image: url('/img/bg.webp');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            min-height: 100vh;
-        }
-
-        #bg-image::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-            background-color: #0e3500bb;
-            z-index: 1;
-        } */
+    <style> 
 
         #bg-image {
             position: relative;
-            background-image: url('/img/bg.webp');
+            background-image: url('/img/slide1.jpeg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -51,12 +33,12 @@
             text-align: center;
             padding: 2rem;
             color: white;
-            /* warna teks agar kontras */
+            transition: background-image 1s ease-in-out;
         }
 
         #bg-footer {
             position: relative;
-            background-image: url('https://picsum.photos/400/200');
+            background-image: url('/img/bg-menu.jpeg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -72,8 +54,8 @@
 
         #bg-menu {
             position: relative;
-            /* background-image: url('https://fastly.picsum.photos/id/352/400/200.jpg?hmac=x6IEgIIuzQMVaiOYDyTFp4KUSdkqzGT87ofb6fy3HWk'); */
-            background-image: url('https://fastly.picsum.photos/id/912/400/200.jpg?hmac=A8Tgnae0SdlffCjD8tpcLDYw0l7ZwOFd9w5EUFiJQfU');
+            background-image: url('/img/slide2.jpeg');
+            /* background-image: url('https://fastly.picsum.photos/id/912/400/200.jpg?hmac=A8Tgnae0SdlffCjD8tpcLDYw0l7ZwOFd9w5EUFiJQfU'); */
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;

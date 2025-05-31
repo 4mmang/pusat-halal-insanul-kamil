@@ -17,7 +17,7 @@
             <div class="row row-cols-1 row-cols-md-3 g-4 align-items-stretch">
                 <div class="col">
                     <div class="card h-100 shadow-lg">
-                        <img src="https://picsum.photos/400/400?random=1" class="card-img-top" alt="...">
+                        <img src="{{ asset('img/5.jpeg') }}" class="card-img-top" alt="...">
                         <div class="card-body d-flex flex-column text-center text-default">
                             <h5 class="card-title">Usaha Besar/Tinggi</h5>
                             <h5 class="card-title">Rp12.500.000</h5>
@@ -27,7 +27,7 @@
                 </div>
                 <div class="col">
                     <div class="card h-100 shadow-lg">
-                        <img src="https://picsum.photos/400/400?random=2" class="card-img-top" alt="...">
+                        <img src="{{ asset('img/3.jpeg') }}" class="card-img-top" alt="...">
                         <div class="card-body d-flex flex-column text-center text-default">
                             <h5 class="card-title">Usaha Menengah</h5>
                             <h5 class="card-title">Rp5.000.000</h5>
@@ -37,7 +37,7 @@
                 </div>
                 <div class="col">
                     <div class="card h-100 shadow-lg">
-                        <img src="https://picsum.photos/400/400?random=3" class="card-img-top" alt="...">
+                        <img src="{{ asset('img/5.jpeg') }}" class="card-img-top" alt="...">
                         <div class="card-body d-flex flex-column text-center text-default">
                             <h5 class="card-title">Usaha Mikro / Kecil</h5>
                             <h5 class="card-title">Rp650.000</h5>

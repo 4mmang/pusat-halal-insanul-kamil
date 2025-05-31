@@ -33,8 +33,8 @@
     <section class="py-5">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
-                    <img src="https://picsum.photos/600/330?random=1" class="img-fluid" alt="">
+                <div class="col-md-6 d-flex align-items-center">
+                    <img src="{{ asset('img/1.jpeg') }}" class="img-fluid mx-auto" alt="">
                 </div>
                 <div class="col-md-6">
                     <div class="card p-4 shadow-lg">

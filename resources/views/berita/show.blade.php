@@ -9,6 +9,13 @@
                     </p>
                 </div>
             </div>
+            <div class="row justify-content-center mt-3">
+                <div class="col-4">
+                    <hr>
+                    <p>{{ $berita->created_at->format('F j Y') }}</p>
+                    <hr>
+                </div>
+            </div>
         </div>
     </section>
 

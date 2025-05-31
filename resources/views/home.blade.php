@@ -2,12 +2,13 @@
 @section('content')
     <section id="bg-image">
         <div class="text-wrapper">
-            <p class="fw-bold fs-2"><span>LPH</span> <span class="text-warning playfair">Pusat Halal Insan Kamil</span></p>
-            <p>
+            <p class="fw-bold fs-1"><span>LPH</span> <span class="text-warning playfair">Pusat Halal Insan Kamil</span></p>
+            <p class="fw-bold fs-5">
                 Mitra terpercaya dalam mewujudkan legalitas dan daya saing UMKM melalui layanan halal yang terintegrasi,
                 profesional, dan berlandaskan syariah.
             </p>
-            <a href="https://wa.me/6285240364660" class="btn btn-warning rounded-4 px-4 py-2 text-default">Hubungi Kami</a>
+            <a href="https://wa.me/6285240364660"
+                class="btn btn-warning rounded-4 mt-3 fw-bold px-4 py-2 text-default">Hubungi Kami</a>
         </div>
     </section>
 
@@ -351,3 +352,19 @@
         </div>
     </section>
 @endsection
+@push('scripts')
+    <script>
+        const images = [
+            '/img/slide1.jpeg',
+            '/img/slide2.jpeg',
+        ];
+
+        let index = 0;
+        const bg = document.getElementById('bg-image');
+
+        setInterval(() => {
+            index = (index + 1) % images.length;
+            bg.style.backgroundImage = `url('${images[index]}')`;
+        }, 3000); // ganti gambar tiap 3 detik
+    </script>
+@endpush

@@ -22,7 +22,8 @@
                             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                         </div>
                     @endif
-                    <form action="{{ route('pendaftaran.store') }}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ route('pendaftaran.store') }}" method="POST" enctype="multipart/form-data"
+                        onsubmit="disableButton()">
                         @csrf
                         <div class="row">
                             <div class="col-md-6 mb-3">
@@ -254,7 +255,8 @@
                                 @enderror
                             </div>
                         </div>
-                        <button class="btn btn-warning text-default fw-bold mt-3 px-5 py-2 rounded-5 fs-6">
+                        <button class="btn btn-warning text-default fw-bold mt-3 px-5 py-2 rounded-5 fs-6" type="submit"
+                            id="submitButton">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-send me-2" viewBox="0 0 16 16">
                                 <path
@@ -262,6 +264,14 @@
                             </svg>
                             Kirim
                         </button>
+
+                        <script>
+                            function disableButton() {
+                                const button = document.getElementById('submitButton');
+                                button.disabled = true;
+                                button.textContent = 'Mengirim...'; // Optional: Change button text
+                            }
+                        </script>
                     </form>
                 </div>
             </div>
