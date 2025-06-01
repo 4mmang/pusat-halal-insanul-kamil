@@ -288,22 +288,40 @@
                         <div class="col-md-3 ms-lg-5 text-start">
                             <ul>
                                 <li>
-                                    UU No 33 / Tahun 2014
+                                    <a href="https://lpharsyindonesia.or.id/wp-content/uploads/sites/460/2025/05/UU-Nomor-33-Tahun-2014.pdf"
+                                        class="text-decoration-none">
+                                        UU No 33 / Tahun 2014
+                                    </a>
                                 </li>
                                 <li>
-                                    KMA 1360 / Tahun 2021
+                                    <a href="https://lpharsyindonesia.or.id/wp-content/uploads/sites/460/2025/05/KMA-1360-Tahun-2021-tentang-Bahan-yang-Dikecualikan-dari-Kewajiban-Bersertifikat-Halal-rev.pdf"
+                                        class="text-decoration-none">
+                                        KMA 1360 / Tahun 2021
+                                    </a>
                                 </li>
                                 <li>
-                                    KMA 748 / Tahun 2021
+                                    <a href="https://lpharsyindonesia.or.id/wp-content/uploads/sites/460/2025/05/KMA-748-Tahun-2021-Produk-Yang-Wajib-Bersertifikat-Halal-rev.pdf"
+                                        class="text-decoration-none">
+                                        KMA 748 / Tahun 2021
+                                    </a>
                                 </li>
                                 <li>
-                                    KMA 944 / Tahun 2024
+                                    <a href="https://lpharsyindonesia.or.id/wp-content/uploads/sites/460/2025/05/KMA-944-tahun-2024-ttg-Perubahan-atas-KMA-748-Tahun-2021-ttd-.pdf"
+                                        class="text-decoration-none">
+                                        KMA 944 / Tahun 2024
+                                    </a>
                                 </li>
                                 <li>
-                                    Kepkaban 78 / Tahun 2023
+                                    <a href="https://lpharsyindonesia.or.id/wp-content/uploads/sites/460/2025/05/Kepkaban-78-Thn-2023_Pedoman-Sertifikasi-Halal-Makanan-Minuman-dng-Pengelolahan.pdf"
+                                        class="text-decoration-none">
+                                        Kepkaban 78 / Tahun 2023
+                                    </a>
                                 </li>
                                 <li>
-                                    Penetapan Fatwa MUI
+                                    <a href="https://lpharsyindonesia.or.id/wp-content/uploads/sites/460/2025/05/Fatwa-Halal-Haram-MUI.pdf"
+                                        class="text-decoration-none">
+                                        Penetapan Fatwa MUI
+                                    </a>
                                 </li>
                             </ul>
                         </div>
