@@ -147,30 +147,48 @@
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label for="ktp" class="mb-2">KTP <span class="text-danger">*</span></label>
-                                {{-- Check if there's a KTP file path in $pendaftar before displaying --}}
                                 @if ($pendaftar->ktp)
-                                    <img src="{{ asset('storage/' . $pendaftar->ktp) }}" alt="KTP Image"
-                                        class="img-fluid border p-2">
+                                    @php
+                                        $fileExtension = pathinfo($pendaftar->ktp, PATHINFO_EXTENSION);
+                                        $isPdf = strtolower($fileExtension) == 'pdf';
+                                    @endphp
+                                    <a href="{{ asset('storage/' . $pendaftar->ktp) }}" target="_blank"
+                                        class="btn {{ $isPdf ? 'btn-danger' : 'btn-primary' }} btn-sm d-block text-start p-2 px-3"
+                                        style="white-space: normal;">
+                                        <i class="fas {{ $isPdf ? 'fa-file-pdf' : 'fa-image' }} m-1"></i> Lihat KTP
+                                    </a>
                                 @else
                                     <p>No KTP uploaded.</p>
                                 @endif
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label for="nib" class="mb-2">NIB</label>
-                                {{-- Check if there's a NIB file path in $pendaftar before displaying --}}
                                 @if ($pendaftar->nib)
-                                    <img src="{{ asset('storage/' . $pendaftar->nib) }}" alt="NIB Image"
-                                        class="img-fluid border p-2">
+                                    @php
+                                        $fileExtension = pathinfo($pendaftar->nib, PATHINFO_EXTENSION);
+                                        $isPdf = strtolower($fileExtension) == 'pdf';
+                                    @endphp
+                                    <a href="{{ asset('storage/' . $pendaftar->nib) }}" target="_blank"
+                                        class="btn {{ $isPdf ? 'btn-danger' : 'btn-primary' }} btn-sm d-block text-start p-2 px-3"
+                                        style="white-space: normal;">
+                                        <i class="fas {{ $isPdf ? 'fa-file-pdf' : 'fa-image' }} m-1"></i> Lihat NIB
+                                    </a>
                                 @else
                                     <p>No NIB uploaded.</p>
                                 @endif
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label for="npwp" class="mb-2">NPWP</label>
-                                {{-- Check if there's an NPWP file path in $pendaftar before displaying --}}
                                 @if ($pendaftar->npwp)
-                                    <img src="{{ asset('storage/' . $pendaftar->npwp) }}" alt="NPWP Image"
-                                        class="img-fluid border p-2">
+                                    @php
+                                        $fileExtension = pathinfo($pendaftar->npwp, PATHINFO_EXTENSION);
+                                        $isPdf = strtolower($fileExtension) == 'pdf';
+                                    @endphp
+                                    <a href="{{ asset('storage/' . $pendaftar->npwp) }}" target="_blank"
+                                        class="btn {{ $isPdf ? 'btn-danger' : 'btn-primary' }} btn-sm d-block text-start p-2 px-3"
+                                        style="white-space: normal;">
+                                        <i class="fas {{ $isPdf ? 'fa-file-pdf' : 'fa-image' }} m-1"></i> Lihat NPWP
+                                    </a>
                                 @else
                                     <p>No NPWP uploaded.</p>
                                 @endif
@@ -178,10 +196,16 @@
                             <div class="col-md-6 mb-3">
                                 <label for="logo_usaha" class="mb-2">Logo Usaha <span
                                         class="text-danger">*</span></label>
-                                {{-- Check if there's a Logo Usaha file path in $pendaftar before displaying --}}
                                 @if ($pendaftar->logo_usaha)
-                                    <img src="{{ asset('storage/' . $pendaftar->logo_usaha) }}" alt="Logo Usaha"
-                                        class="img-fluid border p-2">
+                                    @php
+                                        $fileExtension = pathinfo($pendaftar->logo_usaha, PATHINFO_EXTENSION);
+                                        $isPdf = strtolower($fileExtension) == 'pdf';
+                                    @endphp
+                                    <a href="{{ asset('storage/' . $pendaftar->logo_usaha) }}" target="_blank"
+                                        class="btn {{ $isPdf ? 'btn-danger' : 'btn-primary' }} btn-sm d-block text-start p-2 px-3"
+                                        style="white-space: normal;">
+                                        <i class="fas {{ $isPdf ? 'fa-file-pdf' : 'fa-image' }} m-1"></i> Lihat Logo Usaha
+                                    </a>
                                 @else
                                     <p>No Logo Usaha uploaded.</p>
                                 @endif

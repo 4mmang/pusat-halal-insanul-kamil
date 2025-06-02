@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Registration;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule; // Don't forget to import Rule for 'in' validation
+use Maatwebsite\Excel\Facades\Excel;
 
 class PendaftaranController extends Controller
 {
@@ -45,10 +46,10 @@ class PendaftaranController extends Controller
             'penanggung_jawab' => 'required|string|max:255',
             'jabatan' => 'required|string|max:255',
 
-            'ktp' => 'required|mimes:jpeg,png,jpg|max:2048',
-            'nib' => 'nullable|mimes:jpeg,png,jpg|max:2048',
-            'npwp' => 'nullable|mimes:jpeg,png,jpg|max:2048',
-            'logo_usaha' => 'required|mimes:jpeg,png,jpg|max:2048',
+            'ktp' => 'required|mimes:jpeg,png,jpg,pdf|max:2048',
+            'nib' => 'nullable|mimes:jpeg,png,jpg,pdf|max:2048',
+            'npwp' => 'nullable|mimes:jpeg,png,jpg,pdf|max:2048',
+            'logo_usaha' => 'required|mimes:jpeg,png,jpg,pdf|max:2048',
         ]);
 
         try {
@@ -88,9 +89,11 @@ class PendaftaranController extends Controller
                 'message' => 'Pendaftaran sertifikasi halal berhasil dilakukan.'
             ]);
         } catch (\Throwable $th) {
-            return back()->withErrors([
-                'message' => 'Terjadi kesalahan, silahkan coba lagi!'
-            ]);
+            echo $th->getMessage();
+            // return back()->withErrors([
+            // 'error' => $th->getMessage()
+            // 'error' => 'Terjadi kesalahan, silahkan coba lagi!'
+            // ]);
         }
     }
 }

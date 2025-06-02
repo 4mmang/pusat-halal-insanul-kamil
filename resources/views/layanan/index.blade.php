@@ -57,7 +57,8 @@
     <section class="py-5 bg-body-secondary">
         <div class="container">
             <p class="fw-bold fs-2 text-default mb-5">Lingkup Usaha yang dilayani oleh LPH <span class="text-warning">Pusat Halal
-                    Insan Kamil</span></p>
+                    Insan Kamil</span>
+            </p>
 
             <div class="row">
                 <div class="col-md-6 mb-4"> {{-- Kolom untuk "Barang" --}}
@@ -65,10 +66,13 @@
                         <div class="card-body">
                             <h5 class="card-title fw-bold text-default">Barang</h5>
                             <ul class="list-unstyled">
-                                <li>• Makanan dan Minuman</li>
-                                <li>• Kosmetik</li>
+                                <li>• Makanan</li>
+                                <li>• Minuman</li>
                                 <li>• Obat</li>
+                                <li>• Kosmetik</li>
                                 <li>• Produk Kimiawi</li>
+                                <li>• Produk Biologi</li>
+                                <li>• Produk Rekayasa Genetik</li>
                                 <li>• Barang gunaan</li> 
                             </ul>
                         </div>

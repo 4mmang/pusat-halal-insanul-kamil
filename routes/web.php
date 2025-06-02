@@ -41,6 +41,7 @@ Route::resource('/pendaftaran', PendaftaranController::class)->only(['create', '
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::resource('/kelola-pendaftaran', KelolaPendaftaranController::class)->only(['index', 'show']);
+    Route::get('/kelola-pendaftaran-export', [KelolaPendaftaranController::class, 'export'])->name('kelola-pendaftaran.export');
     Route::resource('/kelola-artikel', KelolaArtikelController::class)->except('show');
     Route::resource('/kelola-berita', KelolaBeritaController::class)->except('show');
     Route::resource('/kelola-FAQ', KelolaFAQController::class)->except('show');

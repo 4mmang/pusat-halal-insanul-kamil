@@ -29,13 +29,13 @@ return new class extends Migration
             $table->enum('skala_usaha', ['mikro', 'menengah', 'besar']);
             $table->string('lokasi_produksi');
             $table->enum('status_usaha', ['pribadi', 'bersama']);
-            $table->string('email_usaha')->unique();
+            $table->string('email_usaha');
             $table->string('no_hp_usaha', 20);
 
             // Personal/Contact Person Information
             $table->string('nama_lengkap');
-            $table->string('no_ktp', 16)->unique();
-            $table->string('email_pribadi')->unique();
+            $table->string('no_ktp', 16);
+            $table->string('email_pribadi');
             $table->string('no_hp', 20);
             $table->string('penanggung_jawab');
             $table->string('jabatan');

@@ -8,8 +8,8 @@
             <p class="mb-0" style="color: #38527E"><a href="{{ route('dashboard') }}" class="text-decoration-none">Pusat Halal Insan Kamil</a> /
                 Daftar Pendaftar
             </p>
+            <a href="{{ route('kelola-pendaftaran.export') }}" style="background-color: #38527E" class="btn mt-3 text-white">Export Data</a>
         </div>
-
         <!-- Content Row -->
         <div class="row">
             <div class="col-md-12">
