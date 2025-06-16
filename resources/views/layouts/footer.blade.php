@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-md-9 d-flex align-items-center">
                 <p class="text-white fs-2 fw-bold m-0">
-                    Dapatkan Sertifikasi Halal Resmi Indonesia! <span class="text-warning"> Hubungi Kami Sekarang!</span>
+                    Dapatkan Sertifikasi Halal Resmi! <span class="text-warning"> Hubungi Kami Sekarang!</span>
                 </p>
             </div>
             <div class="col-md-3 d-flex align-items-center justify-content-md-end justify-content-start mt-3 mt-md-0">
@@ -42,7 +42,7 @@
             <div class="col-md-6 text-white">
                 <p class="fs-5 fw-bold">Sosial Media</p>
                 <p>
-                    <a href="" class="btn btn-default">
+                    <a href="lph-Pusathalalinsankamil" target="_blank" class="btn btn-default">
                         <span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                                 class="bi bi-instagram text-white mb-1" viewBox="0 0 16 16">
@@ -51,7 +51,7 @@
                             </svg>
                         </span>
                     </a>
-                    <a href="" class="btn btn-default">
+                    <a href="http://www.youtube.com/@LPHinsankamil" target="_blank" class="btn btn-default">
                         <span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                                 class="bi bi-youtube text-white mb-1" viewBox="0 0 16 16">

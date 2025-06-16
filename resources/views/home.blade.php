@@ -4,7 +4,7 @@
         <div class="text-wrapper">
             <p class="fw-bold fs-1"><span>LPH</span> <span class="text-warning playfair">Pusat Halal Insan Kamil</span></p>
             <p class="fw-bold fs-5">
-                Mitra terpercaya dalam mewujudkan legalitas dan daya saing UMKM melalui layanan halal yang terintegrasi,
+                Mitra terpercaya dalam mewujudkan legalitas dan daya saing UMK melalui layanan halal yang terintegrasi,
                 profesional, dan berlandaskan syariah.
             </p>
             <a href="https://wa.me/6285240364660"
@@ -15,7 +15,7 @@
 
     <section class="py-5 bg-light">
         <div class="container">
-            <p class="fs-3 playfair text-default mb-5 text-center">Mengapa LPH Insan Kamil Menjadi Pilihan Utama untuk
+            <p class="fs-3 playfair text-default mb-5 text-center">Mengapa LPH Pusat Halal Insan Kamil Menjadi Pilihan Utama untuk
                 Sertifikasi
                 Halal
                 Resmi Indonesia ?</p>
@@ -31,7 +31,7 @@
                                         d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0z" />
                                 </svg></p>
                             <p class="text-center fw-bold text-default fs-5">
-                                Lembaga Sertifikasi Halal Insan Kamil Resmi
+                                Lembaga Sertifikasi Pusat Halal Insan Kamil
                             </p>
                             <p class="text-center">
                                 Kami diakui secara resmi sebagai lembaga pemeriksa halal yang terpercaya untuk membantu
@@ -74,10 +74,10 @@
                                 </svg>
                             </p>
                             <p class="text-center fw-bold text-default fs-5">
-                                Dukungan untuk Semua Skala Bisnis
+                                Dukungan untuk Skala Bisnis
                             </p>
                             <p class="text-center">
-                                Kami melayani usaha mikro kecil, mikro, menengah, hingga besar dengan layanan yang
+                                Kami melayani usaha mikro dan kecil dengan layanan yang
                                 disesuaikan kebutuhan masing-masing skala bisnis.
                             </p>
                         </div>
@@ -97,7 +97,7 @@
                                 Jangkauan Luas
                             </p>
                             <p class="text-center">
-                                Layanan kami tersedia di seluruh Jawa Barat, memastikan produk Anda mendapatkan pengakuan
+                                Layanan kami tersedia di seluruh Sulawesi Selatan, memastikan produk Anda mendapatkan pengakuan
                                 halal di tingkat nasional.
                             </p>
                         </div>
@@ -334,7 +334,7 @@
     <section class="py-5 mb-5">
         <div class="container">
             <p class="fs-3 playfair text-center mb-5 text-default">Berita dan Artikel Terbaru Seputar Sertifikasi Halal
-                Resmi Indonesia
+                Resmi
             </p>
 
             <div class="row row-cols-1 justify-content-center row-cols-md-4 g-4 align-items-stretch">

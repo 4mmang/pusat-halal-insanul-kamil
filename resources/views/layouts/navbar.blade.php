@@ -1,7 +1,9 @@
 <nav class="navbar navbar-expand-lg bg-white fixed-top py-4">
     <div class="container">
-        <a class="navbar-brand work-sans text-default fw-bold playfair" href="{{ route('home') }}">PUSAT HALAL <span
-                class="text-warning">INSAN KAMIL</span></a>
+        <a class="navbar-brand work-sans text-default fw-bold playfair" href="{{ route('home') }}">
+            <img src="{{ asset('img/logo3.png') }}" style="max-width: 70px" class="mb-3" alt="">
+            <span class="text-warning ms-2">LPH INSAN <span class="text-default">KAMIL</span></span>
+        </a>
         <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
             aria-label="Toggle navigation">

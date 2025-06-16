@@ -29,6 +29,16 @@ class ExportPendaftar implements FromCollection, WithHeadings, WithColumnWidths,
             'Status Pendaftaran',
             'Nama Usaha/Perusahaan',
             'Alamat Usaha',
+
+            'Produk',
+            'Bahan/Merek',
+            'Alamat Outlet',
+            'Kemasan',
+            'Cleaning Agent',
+            'Denah ',
+            'Area Pemasaran ',
+            'Jenis Produk ',
+
             'Kelurahan ',
             'Kecamatan ',
             'Kab/Kota',
@@ -40,6 +50,11 @@ class ExportPendaftar implements FromCollection, WithHeadings, WithColumnWidths,
             'Email Usaha',
             'No Telephone/Whatsapp Usaha',
             'Nama Lengkap ',
+
+            'Tempat Lahir',
+            'Tanggal Lahir',
+            'Alamat Domisili',
+
             'Nomor KTP ',
             'Email Pribadi ',
             'No. Telp/Whatsapp ',
@@ -61,6 +76,16 @@ class ExportPendaftar implements FromCollection, WithHeadings, WithColumnWidths,
             $pendaftar->status_pendaftaran,
             $pendaftar->nama_usaha,
             $pendaftar->alamat_usaha,
+
+            asset('storage/' . $pendaftar->pdf_nama_nama_produk),
+            asset('storage/' . $pendaftar->pdf_nama_nama_bahan_merek),
+            $pendaftar->alamat_outlet,
+            $pendaftar->kemasan,
+            $pendaftar->cleaning_agent,
+            asset('storage/' . $pendaftar->denah),
+            $pendaftar->area_pemasaran,
+            $pendaftar->jenis_produk,
+
             $pendaftar->kelurahan,
             $pendaftar->kecamatan,
             $pendaftar->kabupaten,
@@ -72,9 +97,14 @@ class ExportPendaftar implements FromCollection, WithHeadings, WithColumnWidths,
             $pendaftar->email_usaha,
             $pendaftar->no_hp_usaha,
             $pendaftar->nama_lengkap,
-            $pendaftar->no_ktp,
+
+            $pendaftar->tempat_lahir,
+            $pendaftar->tanggal_lahir,
+            $pendaftar->alamat_domisili,
+
+            "'" . (string) $pendaftar->no_ktp,
             $pendaftar->email_pribadi,
-            $pendaftar->no_hp,
+            "'" . (string) $pendaftar->no_hp,
             $pendaftar->penanggung_jawab,
             $pendaftar->jabatan,
             $pendaftar->ktp ? asset('storage/' . $pendaftar->ktp) : '',
@@ -100,11 +130,22 @@ class ExportPendaftar implements FromCollection, WithHeadings, WithColumnWidths,
 
     public function columnWidths(): array
     {
-        $columns = range('A', 'Z');
+        // $columns = range('A', 'Z');
+        $columns = [];
+
+        foreach (range('A', 'Z') as $first) {
+            $columns[] = $first; // A - Z
+        }
+
+        foreach (range('A', 'Z') as $first) {
+            foreach (range('A', 'Z') as $second) {
+                $columns[] = $first . $second; // AA - AZ
+            }
+        }
         $widths = [];
 
         foreach ($columns as $column) {
-            $widths[$column] = 20;
+            $widths[$column] = 30;
         }
 
         return $widths;

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    <section id="bg-menu" class="py-5" style="background-color: #333; margin-top: 5.5rem">
+    <section id="bg-menu" class="py-5" style="background-color: #333; margin-top: 8.5rem">
         <div class="text-wrapper">
             <div class="row justify-content-center">
                 <div class="col-md-12 d-flex align-items-center">

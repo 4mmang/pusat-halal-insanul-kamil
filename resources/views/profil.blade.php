@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    <section id="bg-menu" class="py-5" style="background-color: #333; margin-top: 5.5rem">
+    <section id="bg-menu" class="py-5" style="background-color: #333; margin-top: 8.5rem">
         <div class="text-wrapper">
             <div class="row justify-content-center">
                 <div class="col-md-12 d-flex align-items-center">
@@ -22,7 +22,7 @@
                 <div class="col-md-8 d-flex align-items-center">
                     <p class="fs-5">LPH Pusat Halal Insan Kamil adalah lembaga pemeriksa halal independen yang berkomitmen
                         menjadi bagian
-                        dari penyelenggaraan sertifikasi legalitas Usaha Mikro, Kecil, dan Menengah (UMKM) di Indonesia,
+                        dari penyelenggaraan sertifikasi legalitas Usaha Mikro dan Kecil (UMK) di Indonesia,
                         khususnya di wilayah Sulawesi Selatan.
                     </p>
                 </div>
@@ -57,9 +57,8 @@
             <div class="row">
                 <p class="fs-3 fw-bold text-default">Visi & Misi</p>
                 <div class="col-md-12 mb-4">
-                    <p class="fs-5 text-default">Menjadi bagian dari penyelenggaraan sertifikasi legalitas Usaha Mikro,
-                        Kecil dan
-                        Menengah (UMKM) di
+                    <p class="fs-5 text-default">Menjadi bagian dari penyelenggaraan sertifikasi legalitas Usaha Mikro dan
+                        Kecil (UMK) di
                         tanah air.</p>
                 </div>
             </div>
@@ -75,7 +74,7 @@
                 <div class="col">
                     <div class="card p-2 shadow-lg rounded-5 h-100">
                         <div class="card-body text-center">
-                            <p class="fs-5 text-default fst-italic">Mewujudkan UMKM berdaya saing, kuat dan berdaulat</p>
+                            <p class="fs-5 text-default fst-italic">Mewujudkan UMK berdaya saing, kuat dan berdaulat</p>
                         </div>
                     </div>
                 </div>
@@ -83,7 +82,7 @@
                     <div class="card p-2 shadow-lg rounded-5 h-100">
                         <div class="card-body text-center">
                             <p class="fs-5 text-default fst-italic">Mewujudkan kerjasama multi stakeholder dalam
-                                meningkatkan kapasitas UMKM</p>
+                                meningkatkan kapasitas UMK</p>
                         </div>
                     </div>
                 </div>
@@ -105,7 +104,7 @@
 
             <div class="row">
                 <div class="col-md-12">
-                    <img src="{{ asset('img/struktur.png') }}" class="img-fluid" alt="">
+                    <img src="{{ asset('img/profil-asli.png') }}" class="img-fluid" alt="">
                 </div>
             </div>
         </div>

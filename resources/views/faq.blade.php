@@ -1,5 +1,5 @@
 @extends('layouts.app')
-<section class="py-5 bg-light" style="margin-top: 5.5rem;">
+<section class="py-5 bg-light" style="margin-top: 8.5rem;">
     <div class="container">
         <div class="row">
             <div class="col-md-12">

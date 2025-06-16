@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    <section id="bg-menu" class="py-5" style="background-color: #333; margin-top: 5.5rem">
+    <section id="bg-menu" class="py-5" style="background-color: #333; margin-top: 8.5rem">
         <div class="text-wrapper">
             <div class="row justify-content-center">
                 <div class="col-md-12 d-flex align-items-center">
@@ -14,8 +14,9 @@
     <section class="py-5">
         <div class="container">
 
-            <div class="row row-cols-1 row-cols-md-3 g-4 align-items-stretch">
-                <div class="col">
+            {{-- <div class="row row-cols-1 row-cols-md-3 g-4 align-items-stretch"> --}}
+            <div class="row justify-content-center">
+                {{-- <div class="col">
                     <div class="card h-100 shadow-lg">
                         <img src="{{ asset('img/5.jpeg') }}" class="card-img-top" alt="...">
                         <div class="card-body d-flex flex-column text-center text-default">
@@ -36,8 +37,8 @@
                                 dan Produk</p>
                         </div>
                     </div>
-                </div>
-                <div class="col">
+                </div> --}}
+                <div class="col-md-3">
                     <div class="card h-100 shadow-lg">
                         <img src="{{ asset('img/5.jpeg') }}" class="card-img-top" alt="...">
                         <div class="card-body d-flex flex-column text-center text-default">
