@@ -237,7 +237,7 @@ class PendaftaranController extends Controller
             </head>
             <body>
                 <h1>Nama-nama Produk</h1>
-                <pre>' . htmlspecialchars($produkTextForPdf) . '</pre>
+                ' . $produkHtml . '
             </body>
             </html>';
             $dompdfProduk->loadHtml($htmlProduk);
@@ -288,7 +288,7 @@ class PendaftaranController extends Controller
             </head>
             <body>
                 <h1>Nama-nama Bahan/Merek</h1>
-                <pre>' . htmlspecialchars($bahanTextForPdf) . '</pre>
+                ' . $bahanHtml . ' 
             </body>
             </html>';
             $dompdfBahan->loadHtml($htmlBahan);

@@ -597,7 +597,7 @@
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label for="logo_usaha" class="mb-2">Logo Usaha <span
-                                        class="text-danger">*</span></label>
+                                        class="text-danger"></span></label>
                                 <input type="file" type="image"
                                     class="form-control @error('logo_usaha') is-invalid @enderror" name="logo_usaha"
                                     id="logo_usaha">
@@ -637,7 +637,6 @@
             height: 120,
             toolbar: [
                 ['para', ['ul', 'ol']],
-                ['table', ['table']],
             ]
         });
     </script>
@@ -649,7 +648,6 @@
             height: 120,
             toolbar: [
                 ['para', ['ul', 'ol']],
-                ['table', ['table']],
             ]
         });
     </script>
