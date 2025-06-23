@@ -42,7 +42,8 @@
             <div class="col-md-6 text-white">
                 <p class="fs-5 fw-bold">Sosial Media</p>
                 <p>
-                    <a href="lph-Pusathalalinsankamil" target="_blank" class="btn btn-default">
+                    <a href="https://www.instagram.com/lph_pusathalalinsankamil?utm_source=qr&igsh=Zzk4cm5yNWNkNDkx"
+                        target="_blank" class="btn btn-default">
                         <span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                                 class="bi bi-instagram text-white mb-1" viewBox="0 0 16 16">
