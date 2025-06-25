@@ -77,8 +77,7 @@
                                 Dukungan untuk Skala Bisnis
                             </p>
                             <p class="text-center">
-                                Kami melayani usaha mikro dan kecil dengan layanan yang
-                                disesuaikan kebutuhan masing-masing skala bisnis.
+                                Kami melayani usaha mikro dan kecil.
                             </p>
                         </div>
                     </div>
